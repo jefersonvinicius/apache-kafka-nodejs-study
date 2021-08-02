@@ -1,0 +1,10 @@
+{
+  "name": "apache-kafka-nodejs-study",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Jeferson Vinícius <jeferson.viniciuscrc@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "node-rdkafka": "^2.10.1"
+  }
+}
