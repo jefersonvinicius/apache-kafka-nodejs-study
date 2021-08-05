@@ -1,7 +1,11 @@
 FROM ubuntu:20.04
 
 RUN apt-get update
-RUN apt-get install librdkafka-dev curl -y
+RUN apt-get install -y \
+    librdkafka-dev \
+    curl \
+    python \
+    build-essential
 
 RUN curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash \
     && export NVM_DIR="$HOME/.nvm" \
