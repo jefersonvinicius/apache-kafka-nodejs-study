@@ -1,4 +1,5 @@
 const Kafka = require('node-rdkafka');
+const { input, delay } = require('./helpers');
 
 console.log(Kafka.librdkafkaVersion);
 
@@ -15,6 +16,14 @@ const producer = new Kafka.Producer(
 );
 
 producer.connect();
+
+producer.on('event.error', (error) => {
+  console.log('Error on producer: ', error.message);
+});
+
+producer.on('disconnected', () => {
+  console.log('Producer disconnected');
+});
 
 producer.on('delivery-report', (error, report) => {
   if (error) {
@@ -34,29 +43,23 @@ producer.on('delivery-report', (error, report) => {
 producer.on('ready', async () => {
   console.log('Connected!');
 
-  try {
-    const list = Array(5)
-      .fill(null)
-      .map((_, i) => i);
+  while (true) {
+    const message = await input('\nType a message or quit: ');
+    if (message.toLowerCase() === 'quit') break;
 
-    for await (const i of list) {
-      producer.produce(topic, null, Buffer.from(`Test message ${i + 1}`), null, Date.now());
-      producer.flush(1000);
-      await delay(1);
-    }
-  } catch (error) {
-    console.log('Error: ', error.message);
+    producer.produce(topic, null, Buffer.from(message), null, Date.now());
+    producer.flush(1000);
+    await delay(1);
   }
 
-  producer.disconnect();
-});
-
-producer.on('event.error', (error) => {
-  console.log('Error on producer: ', error.message);
-});
-
-function delay(seconds) {
-  return new Promise((resolve) => {
-    setTimeout(() => resolve(), seconds * 100);
+  producer.disconnect((error, data) => {
+    if (error) {
+      console.log(error);
+    }
+    const metrics = {
+      'Connection Opened': new Date(data.connectionOpened).toUTCString(),
+    };
+    console.table(metrics);
+    process.exit();
   });
-}
+});
