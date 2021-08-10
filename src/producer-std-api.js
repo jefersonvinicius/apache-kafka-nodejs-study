@@ -1,4 +1,5 @@
 const Kafka = require('node-rdkafka');
+const fs = require('fs');
 const { input, delay } = require('./helpers');
 
 console.log(Kafka.librdkafkaVersion);
@@ -15,6 +16,8 @@ const producer = new Kafka.Producer(
   }
 );
 
+const logFile = fs.createWriteStream('./delivery-reports.txt', { flags: 'a' });
+
 producer.connect();
 
 producer.on('event.error', (error) => {
@@ -30,7 +33,11 @@ producer.on('delivery-report', (error, report) => {
     console.log('[DELIVERY REPORT]: Error -> ' + error.message);
     return;
   }
-  console.log('[DELIVERY REPORT]: ' + formatReport());
+  const deliveryReport = '[DELIVERY REPORT]: ' + formatReport();
+  const logLine = `\n\nAt: ${new Date().toLocaleString()}\n${deliveryReport}`;
+
+  console.log(deliveryReport);
+  logFile.write(logLine);
 
   function formatReport() {
     return `
@@ -60,6 +67,7 @@ producer.on('ready', async () => {
       'Connection Opened': new Date(data.connectionOpened).toUTCString(),
     };
     console.table(metrics);
+    logFile.close();
     process.exit();
   });
 });
