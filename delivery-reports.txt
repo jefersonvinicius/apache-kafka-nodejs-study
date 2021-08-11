@@ -1,0 +1,145 @@
+
+
+At: 8/11/2021, 9:41:23 PM
+[DELIVERY REPORT]: 
+    message: 
+    partition: 1
+    offset: 51
+
+At: 8/11/2021, 9:43:12 PM
+[DELIVERY REPORT]: 
+    message: message
+    partition: 0
+    offset: 46
+
+At: 8/11/2021, 9:43:14 PM
+[DELIVERY REPORT]: 
+    message: message
+    partition: 0
+    offset: 47
+
+At: 8/11/2021, 9:43:16 PM
+[DELIVERY REPORT]: 
+    message: outra
+    partition: 0
+    offset: 48
+
+At: 8/11/2021, 9:43:16 PM
+[DELIVERY REPORT]: 
+    message: que
+    partition: 0
+    offset: 49
+
+At: 8/11/2021, 9:43:19 PM
+[DELIVERY REPORT]: 
+    message: legal
+    partition: 0
+    offset: 50
+
+At: 8/11/2021, 9:43:25 PM
+[DELIVERY REPORT]: 
+    message: q
+    partition: 1
+    offset: 52
+
+At: 8/11/2021, 9:43:26 PM
+[DELIVERY REPORT]: 
+    message: e
+    partition: 1
+    offset: 53
+
+At: 8/11/2021, 9:43:27 PM
+[DELIVERY REPORT]: 
+    message: w
+    partition: 1
+    offset: 54
+
+At: 8/11/2021, 9:43:27 PM
+[DELIVERY REPORT]: 
+    message: a
+    partition: 1
+    offset: 55
+
+At: 8/11/2021, 9:43:28 PM
+[DELIVERY REPORT]: 
+    message: s
+    partition: 1
+    offset: 56
+
+At: 8/11/2021, 9:43:28 PM
+[DELIVERY REPORT]: 
+    message: d
+    partition: 1
+    offset: 57
+
+At: 8/11/2021, 9:43:29 PM
+[DELIVERY REPORT]: 
+    message: f
+    partition: 1
+    offset: 58
+
+At: 8/11/2021, 9:43:29 PM
+[DELIVERY REPORT]: 
+    message: g
+    partition: 1
+    offset: 59
+
+At: 8/11/2021, 9:43:29 PM
+[DELIVERY REPORT]: 
+    message: h
+    partition: 1
+    offset: 60
+
+At: 8/11/2021, 9:43:30 PM
+[DELIVERY REPORT]: 
+    message: j
+    partition: 1
+    offset: 61
+
+At: 8/11/2021, 9:43:30 PM
+[DELIVERY REPORT]: 
+    message: q
+    partition: 1
+    offset: 62
+
+At: 8/11/2021, 9:43:31 PM
+[DELIVERY REPORT]: 
+    message: w
+    partition: 1
+    offset: 63
+
+At: 8/11/2021, 9:43:31 PM
+[DELIVERY REPORT]: 
+    message: e
+    partition: 1
+    offset: 64
+
+At: 8/11/2021, 9:43:32 PM
+[DELIVERY REPORT]: 
+    message: r
+    partition: 1
+    offset: 65
+
+At: 8/11/2021, 9:43:32 PM
+[DELIVERY REPORT]: 
+    message: t
+    partition: 1
+    offset: 66
+
+At: 8/11/2021, 9:43:32 PM
+[DELIVERY REPORT]: 
+    message: y
+    partition: 1
+    offset: 67
+
+At: 8/11/2021, 9:43:33 PM
+[DELIVERY REPORT]: 
+    message: u
+    partition: 1
+    offset: 68
+
+At: 8/11/2021, 9:43:33 PM
+[DELIVERY REPORT]: 
+    message: i
+    partition: 1
+    offset: 69

@@ -4,6 +4,8 @@ const { input, delay } = require('./helpers');
 
 console.log(Kafka.librdkafkaVersion);
 
+const key = process.argv.slice(1)[process.argv.indexOf('--key')] ?? null;
+
 const topic = 'teste';
 
 const producer = new Kafka.Producer(
@@ -54,7 +56,7 @@ producer.on('ready', async () => {
     const message = await input('\nType a message or quit: ');
     if (message.toLowerCase() === 'quit') break;
 
-    producer.produce(topic, null, Buffer.from(message), null, Date.now());
+    producer.produce(topic, null, Buffer.from(message), key, Date.now());
     producer.flush(1000);
     await delay(1);
   }
