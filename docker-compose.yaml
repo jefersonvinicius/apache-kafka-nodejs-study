@@ -7,6 +7,8 @@ services:
         container_name: nodejskafka
         volumes: 
             - .:/dev/nodejskafka
+        ports: 
+            - 3333:3333
         extra_hosts: 
             - "host.docker.internal:172.17.0.1"
 

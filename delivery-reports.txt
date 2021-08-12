@@ -143,3 +143,69 @@ At: 8/11/2021, 9:43:33 PM
     message: i
     partition: 1
     offset: 69
+
+At: 8/12/2021, 9:42:12 PM
+[DELIVERY REPORT]: 
+    message: tste
+    partition: 0
+    offset: 51
+
+At: 8/12/2021, 9:42:19 PM
+[DELIVERY REPORT]: 
+    message: s
+    partition: 0
+    offset: 52
+
+At: 8/12/2021, 9:42:24 PM
+[DELIVERY REPORT]: 
+    message: s
+    partition: 0
+    offset: 53
+
+At: 8/12/2021, 9:42:27 PM
+[DELIVERY REPORT]: 
+    message: asdasd
+    partition: 1
+    offset: 70
+
+At: 8/12/2021, 9:49:38 PM
+[DELIVERY REPORT]: 
+    message: eXit
+    partition: 1
+    offset: 71
+
+At: 8/12/2021, 9:54:32 PM
+[DELIVERY REPORT]: 
+    message: sad
+    partition: 0
+    offset: 54
+
+At: 8/12/2021, 9:54:37 PM
+[DELIVERY REPORT]: 
+    message: sad
+    partition: 2
+    offset: 50
+
+At: 8/12/2021, 9:54:40 PM
+[DELIVERY REPORT]: 
+    message: sad
+    partition: 1
+    offset: 72
+
+At: 8/12/2021, 9:56:04 PM
+[DELIVERY REPORT]: 
+    message: r
+    partition: 1
+    offset: 73
+
+At: 8/12/2021, 9:58:15 PM
+[DELIVERY REPORT]: 
+    message: t
+    partition: 0
+    offset: 55
+
+At: 8/12/2021, 9:58:24 PM
+[DELIVERY REPORT]: 
+    message: Outra mensagem kkkkk
+    partition: 2
+    offset: 51
